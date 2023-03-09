@@ -26,6 +26,7 @@ function Services({ services }) {
   return (
     <div className="background-image" id="services">
       <div className="services-container">
+        <h1>Explore our services</h1>
         <div className="service-tiles">
           {services.map((service) => (
             <ServiceTile key={service.title} {...service} />

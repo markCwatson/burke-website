@@ -2,7 +2,7 @@ const services = [
   {
     title: "Carpentry",
     description:
-      "BJB Renos offers carpentry services such as custom home building, renovations, additions, and tenant improvements. We specialize in both residential and commercial construction and use high-quality materials and the latest techniques to ensure exceptional workmanship. We value communication and building long-term relationships with clients.",
+      "BJB Renos offers carpentry services such as custom home building, renovations, additions, and home improvements. We specialize in both residential and commercial construction and use high-quality materials and the latest techniques to ensure exceptional workmanship. We value communication and building long-term relationships with clients.",
     image: "/images/img2.jpg",
   },
   {

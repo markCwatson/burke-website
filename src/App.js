@@ -5,7 +5,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 import services from "./db/Services";
-import projects from "./db/projects";
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       <Navbar />
       <Home />
       <Services services={services} />
-      <Projects projects={projects} />
+      <Projects />
       <Contact />
     </div>
   );
