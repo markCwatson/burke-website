@@ -1,0 +1,27 @@
+.footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0.5rem;
+    text-align: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 2vh;
+    opacity: 0.7;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin: 1px;
+    color: #3573B6;
+  }
+  

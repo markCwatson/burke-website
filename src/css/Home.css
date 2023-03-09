@@ -1,0 +1,67 @@
+.background-home-image {
+  background-image: url('../../public/images/img0.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-container {
+    width: 90%;
+    display: flex;
+}
+
+.foreground-content {
+  position: relative; 
+  z-index: 1; 
+}
+
+.foreground-content h1 {
+  color: #3573B6;
+  max-width: 1024px;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  display: table;
+  text-align: justify;
+  display: flex;
+}
+
+.foreground-content p {
+  color: #3573B6;
+  max-width: 1024px;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 1vw;
+  padding-top: 1vw;
+  display: table;
+  text-align: justify;
+  display: flex;
+}
+
+.home-logo {
+  padding-right: 1vw;
+  height: 30vh;
+}
+
+@media (max-width: 700px) {
+  .home-container {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-logo {
+    padding-right: 0;
+    padding-top: 5px;
+    min-width: 40%;
+  }
+}
