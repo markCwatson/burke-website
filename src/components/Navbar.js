@@ -1,28 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import "../css/Navbar.css";
 
 function Navbar() {
+  const navRef = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
   const [formValues, setFormValues] = useState({
     name: "",
     phoneNumber: "",
     email: "",
     projectDescription: "",
   });
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 700) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
 
   const handleFormChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -40,54 +29,51 @@ function Navbar() {
     });
   };
 
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
-
   const handleQuoteRequest = () => {
     // Send notification to company
     // show success screen
   };
 
+  const showNavBar = () => {
+    navRef.current.classList.toggle("navbar-responsive");
+  };
+
   return (
     <>
-      <nav className="navbar">
+      <header>
         <a href="/#Home">
           <img src="/logo.png" alt="" className="navbar-logo" />
         </a>
-        <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
-        </div>
-        <ul className={click ? "nav-menu active" : "navbar-menu"}>
-          <li>
-            <a href="/#services" onClick={closeMobileMenu}>
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="/#projects" onClick={closeMobileMenu}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="/#contact" onClick={closeMobileMenu}>
-              Contact Us
-            </a>
-          </li>
-          <li>
-            {button && (
-              <button
-                className="btn-quote"
-                onClick={() => setIsModalOpen(true)}
-              >
-                Get a Quote
-              </button>
-            )}
-          </li>
-        </ul>
-      </nav>
+        <nav ref={navRef} className="navbar">
+          <a href="/#services" onClick={showNavBar}>
+            Services
+          </a>
+          <a href="/#projects" onClick={showNavBar}>
+            Projects
+          </a>
+          <a href="/#contact" onClick={showNavBar}>
+            Contact Us
+          </a>
+          <button
+            className="navbar-btn-quote"
+            onClick={() => {
+              setIsModalOpen(true);
+              showNavBar();
+            }}
+          >
+            Get a Quote
+          </button>
+          <button
+            className="nabar-mobile-btn navbar-btn-close"
+            onClick={showNavBar}
+          >
+            <FaTimes />
+          </button>
+        </nav>
+        <button className="nabar-mobile-btn" onClick={showNavBar}>
+          <FaBars />
+        </button>
+      </header>
 
       {isModalOpen && (
         <div className="modal-container">
