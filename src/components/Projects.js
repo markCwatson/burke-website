@@ -34,7 +34,7 @@ function Projects() {
   useEffect(() => {
     async function fetchImages() {
       try {
-        const response = await fetch("projects.json");
+        const response = await fetch("/burke-website/projects.json");
         if (!response.ok) {
           throw new Error("Network response not okay");
         }
@@ -100,13 +100,19 @@ function Projects() {
               className="projects-slider-btn projects-slider-btn-left"
               onClick={handleLeftButtonClick}
             >
-              <img src="./images/arrow-left.svg" alt="left-arrow" />
+              <img
+                src="/burke-website/images/arrow-left.svg"
+                alt="left-arrow"
+              />
             </button>
             <button
               className="projects-slider-btn projects-slider-btn-right"
               onClick={handleRightButtonClick}
             >
-              <img src="./images/arrow-right.svg" alt="right-arrow"></img>
+              <img
+                src="/burke-website/images/arrow-right.svg"
+                alt="right-arrow"
+              ></img>
             </button>
           </div>
           <div
@@ -115,7 +121,7 @@ function Projects() {
             onTransitionEnd={handleSlideTransitionEnd}
             id="projects-slide-id"
           >
-            <img src="./images/proj1.jpg" alt="alt"></img>
+            <img src="/burke-website/images/proj1.jpg" alt="alt"></img>
           </div>
         </div>
       </div>

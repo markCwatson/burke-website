@@ -42,7 +42,7 @@ function Navbar() {
     <>
       <header>
         <a href="/#Home">
-          <img src="/logo.png" alt="" className="navbar-logo" />
+          <img src="/burke-website/logo.png" alt="" className="navbar-logo" />
         </a>
         <nav ref={navRef} className="navbar">
           <a href="/#services" onClick={showNavBar}>
