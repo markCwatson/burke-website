@@ -1,9 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import "../css/Quote.css";
 
 function Quote() {
-  const navRef = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formValues, setFormValues] = useState({
     name: "",
@@ -11,10 +10,6 @@ function Quote() {
     email: "",
     projectDescription: "",
   });
-
-  const showNavBar = () => {
-    navRef.current.classList.toggle("navbar-responsive");
-  };
 
   const handleFormChange = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -43,15 +38,14 @@ function Quote() {
         className="quote-btn"
         onClick={() => {
           setIsModalOpen(true);
-          showNavBar();
         }}
       >
         Get a Quote
       </button>
 
       {isModalOpen && (
-        <div className="modal-container">
-          <div className="modal">
+        <div className="quote-modal-container">
+          <div className="quote-modal">
             <h2>Get a Quote</h2>
             <form onSubmit={handleFormSubmit}>
               <div className="form-group">

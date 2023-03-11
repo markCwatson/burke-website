@@ -8,11 +8,11 @@ const Home = () => {
         <div className="home-text">
           <h1>Welcome</h1>
           <p>
-            Welcome to BJB Renos, a family-owned and operated construction
-            company dedicated to providing high-quality construction services to
-            our clients. With over 20 years of experience in the construction
-            industry, we have the expertise and knowledge to take on any
-            project, big or small.
+            Welcome to BJB Renos Plus Inc., a family-owned and operated
+            construction company dedicated to providing high-quality
+            construction services to our clients. With over 20 years of
+            experience in the construction industry, we have the expertise and
+            knowledge to take on any project, big or small.
           </p>
           <p>
             We specialize in residential and commercial construction, including

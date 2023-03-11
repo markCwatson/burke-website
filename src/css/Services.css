@@ -28,7 +28,7 @@
   width: 50%; 
   max-height: 100%;
   max-width: 100%;
-  margin: 1rem;
+  margin: 4vw;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0 0 1vw 0.05vw #fff;
   border-radius: 10px 10px 0 0;
@@ -80,8 +80,8 @@
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  width: 60%;
+  max-width: 50%;
+  width: 50%;
   z-index: 1000;
 }
 
@@ -96,18 +96,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+    }
 
   .services-container > h1 {
     margin-top: 15vh;
   }
 
   .services-container {
+    max-width: 350px;
     width: 90%;
   }
 
   .service-tile {
     width: 90%; 
     margin-top: 5vh;
+  }
+
+  .modal {
+    max-width: 80%;
+    width: 80%;
   }
 }
