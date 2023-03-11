@@ -15,9 +15,11 @@ function Navbar() {
   return (
     <>
       <header>
-        <a href="/burke-website/#Home">
-          <img src="/burke-website/logo.png" alt="" className="navbar-logo" />
-        </a>
+        <div className="navbar-logo-container">
+          <a href="/burke-website/#Home">
+            <img src="/burke-website/logo.png" alt="" className="navbar-logo" />
+          </a>
+        </div>
         <nav ref={navRef} className="navbar">
           <a href="/burke-website/#services" onClick={showNavBar}>
             Services
@@ -37,7 +39,7 @@ function Navbar() {
           </button>
         </nav>
         <button className="nabar-mobile-btn" onClick={showNavBar}>
-          <FaBars />
+          <FaBars size={16} />
         </button>
       </header>
     </>
