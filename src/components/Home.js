@@ -23,7 +23,7 @@ const Home = () => {
             understand our clients' specific needs and preferences.
           </p>
         </div>
-        <img src="/logo.png" alt="" className="home-logo" />
+        <img src="/burke-website/logo.png" alt="" className="home-logo" />
       </div>
     </div>
   );
