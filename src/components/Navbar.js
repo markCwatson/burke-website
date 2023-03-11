@@ -41,17 +41,17 @@ function Navbar() {
   return (
     <>
       <header>
-        <a href="/#Home">
+        <a href="/burke-website/#Home">
           <img src="/burke-website/logo.png" alt="" className="navbar-logo" />
         </a>
         <nav ref={navRef} className="navbar">
-          <a href="/#services" onClick={showNavBar}>
+          <a href="/burke-website/#services" onClick={showNavBar}>
             Services
           </a>
-          <a href="/#projects" onClick={showNavBar}>
+          <a href="/burke-website/#projects" onClick={showNavBar}>
             Projects
           </a>
-          <a href="/#contact" onClick={showNavBar}>
+          <a href="/burke-website/#contact" onClick={showNavBar}>
             Contact Us
           </a>
           <button
