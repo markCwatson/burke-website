@@ -1,26 +1,26 @@
 [
   {
     "alt": "proj1",
-    "url": "images/proj1.jpg"
+    "url": "/images/proj1.jpg"
   },
   {
     "alt": "proj2",
-    "url": "images/proj2.jpg"
+    "url": "/images/proj2.jpg"
   },
   {
     "alt": "proj3",
-    "url": "images/proj3.jpg"
+    "url": "/images/proj3.jpg"
   },
   {
     "alt": "proj4",
-    "url": "images/proj4.jpg"
+    "url": "/images/proj4.jpg"
   },
   {
     "alt": "proj5",
-    "url": "images/proj5.jpg"
+    "url": "/images/proj5.jpg"
   },
   {
     "alt": "proj6",
-    "url": "images/proj6.jpg"
+    "url": "/images/proj6.jpg"
   }
 ]
