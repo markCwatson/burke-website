@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="background-home-image" id="Home">
       <div className="home-container">
-        <div className="foreground-content">
+        <div className="home-text">
           <h1>Welcome</h1>
           <p>
             Welcome to BJB Renos, a family-owned and operated construction
@@ -23,7 +23,9 @@ const Home = () => {
             understand our clients' specific needs and preferences.
           </p>
         </div>
-        <img src="/burke-website/logo.png" alt="" className="home-logo" />
+        <div className="home-logo">
+          <img src="/burke-website/logo.png" alt="" />
+        </div>
       </div>
     </div>
   );

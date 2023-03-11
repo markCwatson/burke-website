@@ -48,24 +48,12 @@
   animation: 850ms forwards moveLeft cubic-bezier(0.25,-0.50, 0.17, 1.2);
 }
 
-@keyframes moveLeft {
-  10% {
-    left: -3px;
-  }
-}
-
 .projects-slider-btn-right {
   right: 0;
   transform: translate(-50%, -50%);
 }
 .projects-slider-btn-right:is(:hover, :focus) {
   animation: 850ms forwards moveRight cubic-bezier(0.25,-0.50, 0.17, 1.2);
-}
-
-@keyframes moveRight {
-  10% {
-    right: -3px;
-  }
 }
 
 .projects-slide {
@@ -78,4 +66,18 @@
   width: 60%;
   flex: 1 0 100%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 800px) {
+  .projects-container {
+    padding: 0;
+  }
+
+  .projects-container > h1 {
+    margin-bottom: 5vh;
+  }
+
+  .projects-slider {
+    max-width: 100vw;
+  }
 }
