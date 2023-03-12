@@ -6,5 +6,4 @@
 */build
 
 # misc
-.env
 .env.dev
