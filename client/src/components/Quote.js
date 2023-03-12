@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 
 import "../css/Quote.css";
 
@@ -19,7 +18,6 @@ function Quote() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues);
     setIsModalOpen(false);
     setFormValues({
       name: "",
@@ -32,23 +30,19 @@ function Quote() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Note:
-    // Email doesn't work because I am not providing the correct env variables.
-    // (But it does work when the ids below are replaces with process.env.<id>)
-    // For security, we cannot store these variables on frontend.
-    // Will create a simple node/express-based backend.
-    emailjs
-      .sendForm("service id", "template id", form.current, "public key")
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    fetch("/api/v1/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: `${form.current["name"].value}`,
+        number: `${form.current["phoneNumber"].value}`,
+        email: `${form.current["email"].value}`,
+        description: `${form.current["projectDescription"].value}`,
+      }),
+    }).then((response) => console.log(response));
 
-    console.log(e.result);
     handleFormSubmit(e); // or e.target.reset();
   };
 
