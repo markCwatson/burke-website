@@ -16,18 +16,18 @@ function Navbar() {
     <>
       <header>
         <div className="navbar-logo-container">
-          <a href="/burke-website/#Home">
-            <img src="/burke-website/logo.png" alt="" className="navbar-logo" />
+          <a href="/#Home">
+            <img src="/logo.png" alt="" className="navbar-logo" />
           </a>
         </div>
         <nav ref={navRef} className="navbar">
-          <a href="/burke-website/#services" onClick={showNavBar}>
+          <a href="/#services" onClick={showNavBar}>
             Services
           </a>
-          <a href="/burke-website/#projects" onClick={showNavBar}>
+          <a href="/#projects" onClick={showNavBar}>
             Projects
           </a>
-          <a href="/burke-website/#contact" onClick={showNavBar}>
+          <a href="/#contact" onClick={showNavBar}>
             Contact Us
           </a>
           <Quote />

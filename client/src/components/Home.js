@@ -24,7 +24,7 @@ const Home = () => {
           </p>
         </div>
         <div className="home-logo">
-          <img src="/burke-website/logo.png" alt="" />
+          <img src="/logo.png" alt="" />
         </div>
       </div>
     </div>
