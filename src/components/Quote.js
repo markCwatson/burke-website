@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import "../css/Quote.css";
 
 function Quote() {
+  const form = useRef();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formValues, setFormValues] = useState({
     name: "",
@@ -27,9 +29,27 @@ function Quote() {
     });
   };
 
-  const handleQuoteRequest = () => {
-    // Send notification to company
-    // show success screen
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Note:
+    // Email doesn't work because I am not providing the correct env variables.
+    // (But it does work when the ids below are replaces with process.env.<id>)
+    // For security, we cannot store these variables on frontend.
+    // Will create a simple node/express-based backend.
+    emailjs
+      .sendForm("service id", "template id", form.current, "public key")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    console.log(e.result);
+    handleFormSubmit(e); // or e.target.reset();
   };
 
   return (
@@ -47,7 +67,7 @@ function Quote() {
         <div className="quote-modal-container">
           <div className="quote-modal">
             <h2>Get a Quote</h2>
-            <form onSubmit={handleFormSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="form-group">
                 <label htmlFor="name">Name:</label>
                 <input
@@ -93,11 +113,7 @@ function Quote() {
                   required
                 ></textarea>
               </div>
-              <button
-                className="quote-submit-btn"
-                type="submit"
-                onClick={() => handleQuoteRequest()}
-              >
+              <button className="quote-submit-btn" type="submit">
                 Submit
               </button>
             </form>
