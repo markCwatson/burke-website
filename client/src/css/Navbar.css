@@ -14,19 +14,19 @@ header {
   font-size: 1.5rem;
 }
 
-.navbar-logo-container {
+.bjb-navbar-logo-container {
   margin-left: 7.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar-logo {
+.bjb-navbar-logo {
   max-width: 100%;
   max-height: 60px;
 }
 
-.navbar {
+.bjb-navbar {
   right: 0;
   width: 100%;
   display: flex;
@@ -34,14 +34,14 @@ header {
   align-items: center;
 }
 
-.navbar a {
+.bjb-navbar a {
   color: #3573B6;
   text-decoration: none;
   margin: 0 1.5rem;
   position: relative;
 }
 
-.navbar a:before {
+.bjb-navbar a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -54,11 +54,11 @@ header {
   transition: transform ease 300ms;
 }
 
-.navbar a:hover:before {
+.bjb-navbar a:hover:before {
   transform: scale3d(1, 1, 1);
 }
 
-.nabar-mobile-btn {
+.bjb-navbar-mobile-btn {
   padding: 5px;
   cursor: pointer;
   background: transparent;
@@ -69,7 +69,7 @@ header {
 }
 
 @media only screen and (max-width: 800px) {
-  .navbar {
+  .bjb-navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -80,7 +80,6 @@ header {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: #3573B6;
     transition: 1s;
     transform: translateY(-100vh);
     background: rgba(53, 115, 182, 0.9);
@@ -89,30 +88,30 @@ header {
     font-size: 2rem;
   }
 
-  .navbar-logo {
-    padding-top: 15px;
-    max-height: 40px;
+  .bjb-navbar-logo {
+    padding-top: 1px;
+    max-height: 70px;
   }
 
-  .navbar a {
+  .bjb-navbar a {
     color: #f5f5f5;
   }
 
-  .navbar-responsive {
+  .bjb-navbar-responsive {
     transform: none;
   }
 
-  .nabar-mobile-btn {
+  .bjb-navbar-mobile-btn {
+    cursor: pointer;
     position: absolute;
     top: 35px;
     right: 35px;
     visibility: visible;
-    color: #3573B6;
+    color: #3573b6;
   }
   
-  .navbar-btn-close {
+  .bjb-navbar-btn-close {
     opacity: 1;
-    background-color: #3573B6;
     color: #f5f5f5;
   }
 }
