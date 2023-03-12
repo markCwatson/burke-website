@@ -1,8 +1,6 @@
 import "../css/Background.css";
 import "../css/Contact.css";
 
-import Footer from "./Footer";
-
 const Contact = () => {
   return (
     <div className="background-image" id="contact">
@@ -15,7 +13,6 @@ const Contact = () => {
           </ul>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
