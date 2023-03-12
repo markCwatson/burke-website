@@ -82,7 +82,7 @@
     padding: 0;
     border-radius: 0.25rem;
     border: 1px solid #ccc;
-    font-size: 1rem;
+    font-size: 2rem;
   }
   
   .form-group textarea {
@@ -110,14 +110,19 @@
 
     .quote-modal {
       max-width: 80%;
-      width: 80%;
+      width: 60%;
     }
 
     .modal h2 {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
     
     .form-group {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-size: 1.8rem;
     }
   }
