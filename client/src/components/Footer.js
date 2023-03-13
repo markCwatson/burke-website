@@ -5,6 +5,7 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import Box from "@mui/material/Box";
 
 function Footer() {
   return (
@@ -44,9 +45,20 @@ function Footer() {
                 <MDBIcon color="secondary" icon="gem" className="me-3" />
                 BJB Renos Plus Inc.
               </h6>
-              <a href="/#Home">
-                <img src="/logo.png" alt="" className="bjb-navbar-logo" />
-              </a>
+              <Box
+                component="img"
+                sx={{
+                  height: {
+                    xs: 50,
+                    sm: 60,
+                    md: 70,
+                    lg: 80,
+                    xl: 90,
+                  },
+                }}
+                alt="BJB Renos Plus Inc logo"
+                src="/logo.png"
+              />
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
@@ -104,7 +116,7 @@ function Footer() {
                 Halifax, NS. Canada
               </p>
               <p>
-                <MDBIcon color="secondary" icon="envelope" className="me-3" />
+                <MDBIcon color="secondary" icon="envelope" className="me3" />
                 bjbrenosplusinc@gmail.com
               </p>
               <p>
