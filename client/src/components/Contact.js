@@ -1,20 +1,55 @@
-import "../css/Background.css";
-import "../css/Contact.css";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 
-const Contact = () => {
+const card = (
+  <CardContent sx={{ color: "primary.main", bgcolor: "secondary.light" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Box
+        component="img"
+        sx={{
+          height: 85,
+          "&:hover": {
+            opacity: [0.9, 0.8, 0.7],
+          },
+        }}
+        alt="BJB Renos Plus Inc logo"
+        src="/logo.png"
+      />
+      <Typography variant="h6" component="div">
+        1-902-818-8936
+      </Typography>
+      <Typography variant="h6">bjbrenosplusinc@gmail.com</Typography>
+    </Box>
+  </CardContent>
+);
+
+export default function OutlinedCard() {
   return (
-    <div className="background-image" id="contact">
-      <div className="contact-container">
-        <div className="contact-info">
-          <img src="/logo.png" alt="" className="contact-logo" />
-          <ul>
-            <li>1-902-818-8936</li>
-            <li>bjbrenosplusinc@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <Container
+      fixed
+      id="contact"
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "40vh",
+      }}
+    >
+      <Grid container justifyContent="center">
+        <Card variant="outlined">{card}</Card>
+      </Grid>
+    </Container>
   );
-};
-
-export default Contact;
+}

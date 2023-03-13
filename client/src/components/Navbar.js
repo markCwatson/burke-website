@@ -1,48 +1,53 @@
-import React, { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-
-import Quote from "./Quote";
-
-import "../css/Navbar.css";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import SendIcon from "@mui/icons-material/Send";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { Container } from "@mui/material";
 
 function Navbar() {
-  const navRef = useRef();
-
-  const showNavBar = () => {
-    navRef.current.classList.toggle("bjb-navbar-responsive");
-  };
-
   return (
-    <>
-      <header>
-        <div className="bjb-navbar-logo-container">
-          <a href="/#Home">
-            <img src="/logo.png" alt="" className="bjb-navbar-logo" />
-          </a>
-        </div>
-        <nav ref={navRef} className="bjb-navbar">
-          <a href="/#services" onClick={showNavBar}>
-            Services
-          </a>
-          <a href="/#projects" onClick={showNavBar}>
-            Projects
-          </a>
-          <a href="/#contact" onClick={showNavBar}>
-            Contact Us
-          </a>
-          <Quote />
-          <button
-            className="bjb-navbar-mobile-btn bjb-navbar-btn-close"
-            onClick={showNavBar}
-          >
-            <FaTimes />
-          </button>
-        </nav>
-        <button className="bjb-navbar-mobile-btn" onClick={showNavBar}>
-          <FaBars size={16} />
-        </button>
-      </header>
-    </>
+    <Container id="navbar">
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="fixed" color="secondary">
+          <Toolbar>
+            <Box
+              component="img"
+              sx={{
+                height: 75,
+                "&:hover": {
+                  opacity: [0.9, 0.8, 0.7],
+                },
+              }}
+              alt="BJB Renos Plus Inc logo"
+              src="/logo.png"
+            />
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, p: 2 }}
+              color="primary"
+            >
+              BJB Renos Plus Inc.
+            </Typography>
+            <Button variant="text" href="#services">
+              Services
+            </Button>
+            <Button variant="text" href="#projects">
+              Projects
+            </Button>
+            <Button variant="text" href="#contact">
+              Contact
+            </Button>
+            <Button variant="contained" size="medium" endIcon={<SendIcon />}>
+              Get Quote
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    </Container>
   );
 }
 
