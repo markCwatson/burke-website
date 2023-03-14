@@ -44,7 +44,8 @@ export default function OutlinedCard() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "40vh",
+        height: "50vh",
+        paddingTop: "80px",
       }}
     >
       <Grid container justifyContent="center">

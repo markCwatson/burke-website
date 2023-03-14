@@ -23,24 +23,23 @@ function Services() {
       title: "Siding",
       description:
         "Siding is an essential component of any house as it serves both functional and aesthetic purposes. Siding protects the exterior of the house from harsh weather conditions, and it also plays a significant role in the house's overall appearance. BJB Renos understands the importance of siding for a house, and we offer siding services that cater to both of these functions. Our experienced professionals work diligently to ensure that your house's siding is not only durable but also visually appealing.",
-      image: "/images/img1.jpg",
+      image: "/images/siding.jpg",
     },
   ];
 
   return (
-    <Container fixed id="services">
-      <Container sx={{ p: 12 }}>
+    <Container fixed id="services" sx={{ paddingTop: "80px" }}>
+      <Container sx={{ xs: { p: 0 }, md: { p: 6 } }}>
         <Box
           sx={{
             bgcolor: "secondary.light",
             p: 3,
-            mb: 3,
+            mb: 0,
           }}
         >
           <Typography
-            variant="h5"
             align="center"
-            sx={{ color: "primary.main" }}
+            sx={{ color: "primary.main", variant: { xs: "h7", md: "h5" } }}
           >
             Explore Our Services
           </Typography>
@@ -50,6 +49,7 @@ function Services() {
           justifyContent="center"
           spacing="50"
           alignItems="center"
+          sx={{ mt: 1 }}
         >
           {services.map((service, index) => (
             <Grid key={index} item>
