@@ -5,10 +5,24 @@ import Box from "@mui/material/Box";
 
 const Home = () => {
   return (
-    <Container fixed id="home" sx={{ marginTop: "74px" }}>
-      <Grid container justifyContent="center" alignItems="center" height="70vh">
-        <Grid item xs={12} md={8} sx={{ color: "primary.main" }}>
-          <Typography variant="h3" gutterBottom>
+    <Container fixed id="home" sx={{ marginTop: "5px" }}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        height="70vh"
+        sx={{ height: { xs: "95vh", md: "70vh" } }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={8}
+          sx={{
+            color: "primary.main",
+            marginTop: { xs: "40px" },
+          }}
+        >
+          <Typography variant="h5" gutterBottom>
             Welcome
           </Typography>
           <Typography variant="body1" gutterBottom>
@@ -33,7 +47,7 @@ const Home = () => {
           md={4}
           sx={{
             display: "flex",
-            justifyContent: "flex-end",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
@@ -41,11 +55,11 @@ const Home = () => {
             component="img"
             sx={{
               height: {
-                xs: 95,
-                sm: 105,
-                md: 115,
-                lg: 135,
-                xl: 155,
+                xs: 125,
+                sm: 130,
+                md: 140,
+                lg: 150,
+                xl: 160,
               },
             }}
             alt="BJB Renos Plus Inc logo"
