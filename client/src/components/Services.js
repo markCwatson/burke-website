@@ -28,7 +28,7 @@ function Services() {
     {
       title: "Decks",
       description:
-        "At Deck Builders Inc., we recognize the importance of a well-built and visually attractive deck, which is why we offer high-quality deck-building services that meet our clients' specific needs. Our experienced professionals work tirelessly to ensure that your deck is not only sturdy and safe but also visually stunning, adding value and functionality to your property.",
+        "At BJB Renos+ Inc., we recognize the importance of a well-built and visually attractive deck, which is why we offer high-quality deck-building services that meet our clients' specific needs. Our experienced professionals work tirelessly to ensure that your deck is not only sturdy and safe but also visually stunning, adding value and functionality to your property.",
       image: "/images/proj4.jpg",
     },
   ];
