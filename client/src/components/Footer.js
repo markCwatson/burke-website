@@ -5,13 +5,14 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import Box from "@mui/material/Box";
 
 function Footer() {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
+          <span>Follow us on socail media!</span>
         </div>
 
         <div>
@@ -21,17 +22,14 @@ function Footer() {
           <a href="/#Home" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="twitter" />
           </a>
-          <a href="/#Home" className="me-4 text-reset">
-            <MDBIcon color="secondary" fab icon="google" />
-          </a>
-          <a href="/#Home" className="me-4 text-reset">
+          <a
+            href="https://www.instagram.com/bjb_renos_plus_inc/"
+            className="me-4 text-reset"
+          >
             <MDBIcon color="secondary" fab icon="instagram" />
           </a>
           <a href="/#Home" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="linkedin" />
-          </a>
-          <a href="/#Home" className="me-4 text-reset">
-            <MDBIcon color="secondary" fab icon="github" />
           </a>
         </div>
       </section>
@@ -44,9 +42,20 @@ function Footer() {
                 <MDBIcon color="secondary" icon="gem" className="me-3" />
                 BJB Renos Plus Inc.
               </h6>
-              <a href="/#Home">
-                <img src="/logo.png" alt="" className="bjb-navbar-logo" />
-              </a>
+              <Box
+                component="img"
+                sx={{
+                  height: {
+                    xs: 50,
+                    sm: 60,
+                    md: 70,
+                    lg: 80,
+                    xl: 90,
+                  },
+                }}
+                alt="BJB Renos Plus Inc logo"
+                src="/logo.png"
+              />
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
@@ -104,7 +113,7 @@ function Footer() {
                 Halifax, NS. Canada
               </p>
               <p>
-                <MDBIcon color="secondary" icon="envelope" className="me-3" />
+                <MDBIcon color="secondary" icon="envelope" className="me3" />
                 bjbrenosplusinc@gmail.com
               </p>
               <p>
