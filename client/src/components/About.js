@@ -1,33 +1,86 @@
-import "../css/Background.css";
-import "../css/Foreground.css";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 
 const About = () => {
   return (
-    <div className="background-image">
-      <div className="foreground-content">
-        <h1>About</h1>
-        <p>
-          Welcome to Burke Enterprises, a family-owned and operated construction
-          company dedicated to providing high-quality construction services to
-          our clients. With over 20 years of experience in the construction
-          industry, we have the expertise and knowledge to take on any project,
-          big or small.
-        </p>
-        <p>
-          We specialize in residential and commercial construction, including
-          custom homes, renovations, additions, and tenant improvements. From
-          the initial consultation to the final walkthrough, we work closely
-          with our clients to ensure that their vision is realized. We
-          understand that every project is unique, and we take the time to
-          understand our clients' specific needs and preferences.
-        </p>
-        <p>
-          Thank you for considering Burke Enterprises for your construction
-          needs. We look forward to working with you to turn your vision into
-          reality.
-        </p>
-      </div>
-    </div>
+    <Container fixed id="about" sx={{ paddingTop: "80px" }}>
+      <Box
+        sx={{
+          bgcolor: "secondary.light",
+          p: 3,
+          mb: 0,
+        }}
+      >
+        <Typography
+          align="center"
+          sx={{
+            color: "primary.main",
+            variant: { xs: "h7", md: "h5" },
+          }}
+        >
+          About Us
+        </Typography>
+      </Box>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{ height: { xs: "55vh", md: "50vh" }, mb: "30px" }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={8}
+          sx={{
+            color: "primary.main",
+            marginTop: "30px",
+          }}
+        >
+          <Typography variant="body1" gutterBottom>
+            BJB Renos Plus Inc. is a family-owned and operated construction
+            company dedicated to providing high-quality construction services to
+            our clients. With over 20 years of experience in the construction
+            industry, we have the expertise and knowledge to take on any
+            project, big or small.
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            We specialize in residential and commercial construction, including
+            custom homes, renovations, additions, and home improvements. From
+            the initial consultation to the final walkthrough, we work closely
+            with our clients to ensure that their vision is realized. We
+            understand that every project is unique, and we take the time to
+            understand our clients' specific needs and preferences.
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            sx={{
+              height: {
+                xs: 125,
+                sm: 130,
+                md: 140,
+                lg: 150,
+                xl: 160,
+              },
+            }}
+            alt="BJB Renos Plus Inc logo"
+            src="/logo.png"
+          />
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

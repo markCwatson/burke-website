@@ -16,10 +16,10 @@ function Footer() {
         </div>
 
         <div>
-          <a href="/#Home" className="me-4 text-reset">
+          <a href="#Home" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="facebook-f" />
           </a>
-          <a href="/#Home" className="me-4 text-reset">
+          <a href="#Home" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="twitter" />
           </a>
           <a
@@ -28,7 +28,7 @@ function Footer() {
           >
             <MDBIcon color="secondary" fab icon="instagram" />
           </a>
-          <a href="/#Home" className="me-4 text-reset">
+          <a href="#Home" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="linkedin" />
           </a>
         </div>
@@ -90,17 +90,17 @@ function Footer() {
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
               <p>
-                <a href="/#Home" className="text-reset">
+                <a href="#about" className="text-reset">
                   About
                 </a>
               </p>
               <p>
-                <a href="/#services" className="text-reset">
+                <a href="#services" className="text-reset">
                   Services
                 </a>
               </p>
               <p>
-                <a href="/#projects" className="text-reset">
+                <a href="#projects" className="text-reset">
                   Projects
                 </a>
               </p>
