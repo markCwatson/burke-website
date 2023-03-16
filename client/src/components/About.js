@@ -3,8 +3,25 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Label from './Label';
+import { useRef, useState } from 'react';
+
+import useIntersection from '../utils/useIntersection';
 
 const About = () => {
+  const boxRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const inViewport = useIntersection(boxRef, '-50px');
+
+  if (inViewport) {
+    if (!visible) {
+      setVisible(true);
+    }
+  } else {
+    if (visible) {
+      setVisible(false);
+    }
+  }
+
   return (
     <Container fixed id="about" sx={{ paddingTop: '80px' }}>
       <Label label={'About Us'} />
@@ -12,7 +29,7 @@ const About = () => {
         container
         justifyContent="center"
         alignItems="center"
-        sx={{ height: { xs: '55vh', md: '50vh' }, mb: '30px' }}
+        sx={{ height: { xs: '55vh', md: '50vh' }, mb: '60px' }}
       >
         <Grid
           item
@@ -51,7 +68,10 @@ const About = () => {
         >
           <Box
             component="img"
+            ref={boxRef}
             sx={{
+              opacity: visible ? 1 : 0,
+              transition: 'opacity 2s ease-in-out',
               height: {
                 xs: 125,
                 sm: 130,
