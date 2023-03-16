@@ -4,8 +4,8 @@ import {
   MDBRow,
   MDBCol,
   MDBIcon,
-} from "mdb-react-ui-kit";
-import Box from "@mui/material/Box";
+} from 'mdb-react-ui-kit';
+import Box from '@mui/material/Box';
 
 function Footer() {
   return (
@@ -39,7 +39,6 @@ function Footer() {
           <MDBRow className="mt-3">
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
-                <MDBIcon color="secondary" icon="gem" className="me-3" />
                 BJB Renos Plus Inc.
               </h6>
               <Box
@@ -61,28 +60,28 @@ function Footer() {
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="#services" className="text-reset">
                   Carpentry
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="#services" className="text-reset">
                   Finish Work
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="#services" className="text-reset">
                   Siding
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
-                  Additions
+                <a href="#services" className="text-reset">
+                  Decks
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
-                  Decks
+                <a href="#services" className="text-reset">
+                  Windows
                 </a>
               </p>
             </MDBCol>
@@ -127,7 +126,7 @@ function Footer() {
 
       <div
         className="text-center p-4"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
       >
         © 2023 Copyright:
         <a className="text-reset fw-bold" href="https://mdbootstrap.com/">

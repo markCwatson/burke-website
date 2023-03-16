@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit';
 import { Box, Container } from '@mui/material';
 import Label from './Label';
 
+import useIntersection from '../utils/useIntersection';
+
 export default function Projects() {
+  const boxRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const inViewport = useIntersection(boxRef, '-50px');
+
+  if (inViewport) {
+    if (!visible) {
+      setVisible(true);
+    }
+  } else {
+    if (visible) {
+      setVisible(false);
+    }
+  }
+
   return (
     <Container fixed disableGutters id="projects" sx={{ paddingTop: '80px' }}>
       <Container
@@ -14,7 +30,15 @@ export default function Projects() {
         }}
       >
         <Label label={'Explore Our Project Gallery'} />
-        <Box sx={{ paddingTop: '30px' }}>
+        <Box
+          ref={boxRef}
+          sx={{
+            opacity: visible ? 1 : 0,
+            transition: 'opacity 2s ease-in-out',
+            paddingTop: '30px',
+            zIndex: '1',
+          }}
+        >
           <MDBCarousel showIndicators showControls fade>
             <MDBCarouselItem
               className="w-100 d-block"

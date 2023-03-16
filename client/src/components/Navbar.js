@@ -42,7 +42,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar color="secondary" position="sticky" sx={{ zIndex: '1' }}>
+    <AppBar color="secondary" position="sticky" sx={{ zIndex: '2' }}>
       <Toolbar
         sx={{
           display: 'flex',
