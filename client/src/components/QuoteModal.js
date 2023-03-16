@@ -1,26 +1,26 @@
-import { TextField, Button } from "@mui/material";
-import Modal from "@mui/material/Modal";
-import { useState } from "react";
-import Box from "@mui/material/Box";
+import { TextField, Button, Typography } from '@mui/material';
+import Modal from '@mui/material/Modal';
+import { useState } from 'react';
+import Box from '@mui/material/Box';
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
 
-export default function QuoteModal({ open, handleClose }) {
+export default function QuoteModal({ open, handleClose, sayThanks }) {
   const [formData, setFormData] = useState({
-    name: "",
-    number: "",
-    email: "",
-    description: "",
+    name: '',
+    number: '',
+    email: '',
+    description: '',
   });
 
   const handleInputChange = (event) => {
@@ -31,17 +31,18 @@ export default function QuoteModal({ open, handleClose }) {
   const sendEmail = (e) => {
     e.preventDefault();
     setFormData({
-      name: "",
-      number: "",
-      email: "",
-      description: "",
+      name: '',
+      number: '',
+      email: '',
+      description: '',
     });
     handleClose();
+    sayThanks();
 
-    fetch("/api/v1/email", {
-      method: "POST",
+    fetch('/api/v1/email', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         name: `${formData.name}`,
@@ -61,8 +62,11 @@ export default function QuoteModal({ open, handleClose }) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}>
-        <Box component="form" onSubmit={sendEmail} sx={{ width: "100%" }}>
+      <Box sx={style} color="primary.dark">
+        <Box>
+          <Typography>Please fill out this form</Typography>
+        </Box>
+        <Box component="form" onSubmit={sendEmail} sx={{ width: '100%' }}>
           <TextField
             required
             name="name"

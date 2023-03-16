@@ -1,41 +1,26 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Label from './Label';
 
 const About = () => {
   return (
-    <Container fixed id="about" sx={{ paddingTop: "80px" }}>
-      <Box
-        sx={{
-          bgcolor: "secondary.light",
-          p: 3,
-          mb: 0,
-        }}
-      >
-        <Typography
-          align="center"
-          sx={{
-            color: "primary.main",
-            variant: { xs: "h7", md: "h5" },
-          }}
-        >
-          About Us
-        </Typography>
-      </Box>
+    <Container fixed id="about" sx={{ paddingTop: '80px' }}>
+      <Label label={'About Us'} />
       <Grid
         container
         justifyContent="center"
         alignItems="center"
-        sx={{ height: { xs: "55vh", md: "50vh" }, mb: "30px" }}
+        sx={{ height: { xs: '55vh', md: '50vh' }, mb: '30px' }}
       >
         <Grid
           item
           xs={12}
           md={8}
           sx={{
-            color: "primary.main",
-            marginTop: "30px",
+            color: 'primary.main',
+            marginTop: '30px',
           }}
         >
           <Typography variant="body1" gutterBottom>
@@ -59,9 +44,9 @@ const About = () => {
           xs={12}
           md={4}
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <Box
