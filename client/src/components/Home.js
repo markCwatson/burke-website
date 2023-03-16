@@ -2,8 +2,25 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Stack } from '@mui/material';
+import { useRef, useState } from 'react';
+
+import useIntersection from '../utils/useIntersection';
 
 const Home = () => {
+  const boxRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const inViewport = useIntersection(boxRef, '-100px'); // Trigger if 100px is visible from the element
+
+  if (inViewport) {
+    if (!visible) {
+      setVisible(true);
+    }
+  } else {
+    if (visible) {
+      setVisible(false);
+    }
+  }
+
   return (
     <Container
       fixed
@@ -28,11 +45,21 @@ const Home = () => {
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
           >
             <div className="d-flex justify-content-center align-items-center h-100">
-              <Stack sx={{ alignItems: 'center' }}>
+              <Stack
+                ref={boxRef}
+                sx={{
+                  alignItems: 'center',
+                  opacity: visible ? 1 : 0,
+                  transition: 'opacity 2s ease-in-out',
+                }}
+              >
                 <Box
                   component="a"
                   bgcolor="secondary.dark"
-                  sx={{ borderRadius: '15%', p: '10px' }}
+                  sx={{
+                    borderRadius: '15%',
+                    p: '10px',
+                  }}
                 >
                   <Box
                     component="img"
