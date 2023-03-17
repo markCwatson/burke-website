@@ -44,7 +44,7 @@ const Home = () => {
             className="mask"
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
           >
-            <div className="d-flex justify-content-center align-items-center h-100">
+            <div className="d-flex justify-content-center align-items-end h-100">
               <Stack
                 ref={boxRef}
                 sx={{
@@ -53,7 +53,7 @@ const Home = () => {
                   transition: 'opacity 2s ease-in-out',
                 }}
               >
-                <Box
+                {/* <Box
                   component="a"
                   bgcolor="secondary.dark"
                   sx={{
@@ -72,11 +72,11 @@ const Home = () => {
                     alt="BJB Renos Plus Inc logo"
                     src="/logo.png"
                   />
-                </Box>
+                </Box> */}
                 <Typography
                   variant="h7"
                   gutterBottom
-                  sx={{ color: 'secondary.light' }}
+                  sx={{ color: 'secondary.light', p: 4, fontSize: '1.3rem' }}
                 >
                   Atlantic Canada's contractor
                 </Typography>
