@@ -70,7 +70,9 @@ export default function Projects() {
               style={{ maxHeight: '60vh', objectFit: 'cover' }}
             >
               <h5>Exterior</h5>
-              <p>Staging setup to istall siding on this building.</p>
+              <p>
+                Staging setup to install siding on this commercial building.
+              </p>
             </MDBCarouselItem>
           </MDBCarousel>
         </Box>

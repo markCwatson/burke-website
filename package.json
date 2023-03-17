@@ -1,6 +1,6 @@
 {
   "name": "burke-website",
-  "version": "v0.2.4",
+  "version": "v0.2.5",
   "description": "<h1>BJB Renos Plus Inc.</h1>",
   "main": "index.js",
   "scripts": {
