@@ -2,20 +2,16 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import SendIcon from '@mui/icons-material/Send';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Button } from '@mui/material';
 
 import QuoteModal from './QuoteModal';
 import ThanksModal from './ThanksModal';
+import MenuDrawer from './MenuDrawer';
 
 function Navbar({ home }) {
   const [open, setOpen] = React.useState(false);
   const [thanks, setThanks] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const getHref = (section) => (home ? `#${section}` : `/`);
 
@@ -33,14 +29,6 @@ function Navbar({ home }) {
 
   const handleThanksClose = () => {
     setThanks(false);
-  };
-
-  const handleMenuClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
   };
 
   return (
@@ -123,45 +111,7 @@ function Navbar({ home }) {
             Get A Quote
           </Button>
         </Box>
-        <IconButton
-          sx={{
-            display: { xs: 'flex', md: 'none' },
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 50,
-            right: '0%',
-            bgcolor: 'secondary.main',
-          }}
-          onClick={handleMenuClick}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'right',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          onClose={handleMenuClose}
-        >
-          <MenuItem component="a" href="/#about" onClick={handleMenuClose}>
-            About
-          </MenuItem>
-          <MenuItem component="a" href="/#services" onClick={handleMenuClose}>
-            Services
-          </MenuItem>
-          <MenuItem component="a" href="/#projects" onClick={handleMenuClose}>
-            Projects
-          </MenuItem>
-          <MenuItem component="a" href="/#contact" onClick={handleMenuClose}>
-            Contact
-          </MenuItem>
-        </Menu>
+        <MenuDrawer />
       </Toolbar>
     </AppBar>
   );

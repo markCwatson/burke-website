@@ -41,11 +41,11 @@ const About = () => {
           }}
         >
           <Typography variant="body1" gutterBottom>
-            BJB Renos Plus Inc. is a family-owned and operated construction
-            company dedicated to providing high-quality construction services to
-            our clients. With over 20 years of experience in the construction
-            industry, we have the expertise and knowledge to take on any
-            project, big or small.
+            BJB Renos Plus Inc., based out of Halifax, Nova Scotia, is a
+            family-owned and operated construction company dedicated to
+            providing high-quality construction services to our clients. With
+            over 20 years of experience in the construction industry, we have
+            the expertise and knowledge to take on any project, big or small.
           </Typography>
           <Typography variant="body1" gutterBottom>
             We specialize in residential and commercial construction, including
