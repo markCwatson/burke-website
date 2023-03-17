@@ -9,6 +9,7 @@ export default function Label({ label }) {
             bgcolor: 'secondary.light',
             p: 3,
             mb: 0,
+            borderRadius: '50%',
           }}
         >
           <Typography
