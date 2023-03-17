@@ -1,6 +1,7 @@
-const express = require("express");
-const cors = require("cors");
-const sgMail = require("@sendgrid/mail");
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const sgMail = require('@sendgrid/mail');
 
 // Setup server
 const app = express();
@@ -24,14 +25,14 @@ const sendEmail = (requestBody) => {
 
   sgMail
     .send(msg)
-    .then(() => console.log("Email sent"))
+    .then(() => console.log('Email sent'))
     .catch((error) => {
       throw new Error(error);
     });
 };
 
 // Routes
-app.post("/api/v1/email", async (req, res) => {
+app.post('/api/v1/email', async (req, res) => {
   const data = {
     name: req.body.name,
     number: req.body.number,
@@ -50,13 +51,16 @@ app.post("/api/v1/email", async (req, res) => {
   res.sendStatus(500);
 });
 
-// Serve statis react app
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+// Serve static react app
+if (
+  process.env.NODE_ENV === 'production' ||
+  process.env.NODE_ENV === 'staging'
+) {
   app.use(express.static('client/build'));
   app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
   });
- }
+}
 
 // Start server
 let server;
@@ -70,10 +74,9 @@ const start = async () => {
   }
 };
 
-
 start();
 
-process.on("unhandledRejection", (error, promise) => {
+process.on('unhandledRejection', (error, promise) => {
   console.log(`Error: ${error.message}`);
 
   server.close(() => {
