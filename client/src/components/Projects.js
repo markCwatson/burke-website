@@ -48,7 +48,7 @@ export default function Projects() {
               style={{ maxHeight: '60vh', objectFit: 'cover' }}
             >
               <h5>Interior</h5>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <p>Custom trim and moulding, stairs, and windows.</p>
             </MDBCarouselItem>
 
             <MDBCarouselItem
@@ -59,9 +59,7 @@ export default function Projects() {
               style={{ maxHeight: '60vh', objectFit: 'cover' }}
             >
               <h5>Decks</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <p>Custom decks of all sizes and materials.</p>
             </MDBCarouselItem>
 
             <MDBCarouselItem
@@ -72,9 +70,7 @@ export default function Projects() {
               style={{ maxHeight: '60vh', objectFit: 'cover' }}
             >
               <h5>Exterior</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <p>Staging setup to istall siding on this building.</p>
             </MDBCarouselItem>
           </MDBCarousel>
         </Box>

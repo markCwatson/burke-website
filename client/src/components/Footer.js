@@ -7,7 +7,14 @@ import {
 } from 'mdb-react-ui-kit';
 import Box from '@mui/material/Box';
 
-function Footer() {
+function Footer({ home }) {
+  const getHref = (section, id) => {
+    if (id) {
+      return `/services/${id}`;
+    }
+    return home ? `#${section}` : `/`;
+  };
+
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -60,27 +67,27 @@ function Footer() {
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
               <p>
-                <a href="#services" className="text-reset">
+                <a href={getHref('', '0')} className="text-reset">
                   Carpentry
                 </a>
               </p>
               <p>
-                <a href="#services" className="text-reset">
+                <a href={getHref('', '1')} className="text-reset">
                   Finish Work
                 </a>
               </p>
               <p>
-                <a href="#services" className="text-reset">
+                <a href={getHref('', '2')} className="text-reset">
                   Siding
                 </a>
               </p>
               <p>
-                <a href="#services" className="text-reset">
+                <a href={getHref('', '3')} className="text-reset">
                   Decks
                 </a>
               </p>
               <p>
-                <a href="#services" className="text-reset">
+                <a href={getHref('', '4')} className="text-reset">
                   Windows
                 </a>
               </p>
@@ -89,17 +96,17 @@ function Footer() {
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
               <p>
-                <a href="#about" className="text-reset">
+                <a href={getHref('about', false)} className="text-reset">
                   About
                 </a>
               </p>
               <p>
-                <a href="#services" className="text-reset">
+                <a href={getHref('services', false)} className="text-reset">
                   Services
                 </a>
               </p>
               <p>
-                <a href="#projects" className="text-reset">
+                <a href={getHref('projects', false)} className="text-reset">
                   Projects
                 </a>
               </p>

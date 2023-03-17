@@ -12,10 +12,12 @@ import { Button } from '@mui/material';
 import QuoteModal from './QuoteModal';
 import ThanksModal from './ThanksModal';
 
-function Navbar() {
+function Navbar({ home }) {
   const [open, setOpen] = React.useState(false);
   const [thanks, setThanks] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const getHref = (section) => (home ? `#${section}` : `/`);
 
   const handleOpen = () => setOpen(true);
   const handleQuoteClose = () => {
@@ -50,7 +52,7 @@ function Navbar() {
           alignItems: 'center',
         }}
       >
-        <Box component="a" href="#home">
+        <Box component="a" href={getHref('home')}>
           <Box
             component="img"
             sx={{
@@ -64,16 +66,31 @@ function Navbar() {
           />
         </Box>
         <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-          <Button variant="text" size="small" href="#about">
+          <Button
+            variant="text"
+            size="small"
+            href={getHref('about')}
+            sx={{ marginRight: '15px' }}
+          >
             About
           </Button>
-          <Button variant="text" size="small" href="#services">
+          <Button
+            variant="text"
+            size="small"
+            href={getHref('services')}
+            sx={{ marginRight: '15px' }}
+          >
             Services
           </Button>
-          <Button variant="text" size="small" href="#projects">
+          <Button
+            variant="text"
+            size="small"
+            href={getHref('projects')}
+            sx={{ marginRight: '15px' }}
+          >
             Projects
           </Button>
-          <Button variant="text" size="small" href="#contact">
+          <Button variant="text" size="small" href={getHref('contact')}>
             Contact
           </Button>
         </Box>
@@ -132,16 +149,16 @@ function Navbar() {
           }}
           onClose={handleMenuClose}
         >
-          <MenuItem component="a" href="#about" onClick={handleMenuClose}>
+          <MenuItem component="a" href="/#about" onClick={handleMenuClose}>
             About
           </MenuItem>
-          <MenuItem component="a" href="#services" onClick={handleMenuClose}>
+          <MenuItem component="a" href="/#services" onClick={handleMenuClose}>
             Services
           </MenuItem>
-          <MenuItem component="a" href="#projects" onClick={handleMenuClose}>
+          <MenuItem component="a" href="/#projects" onClick={handleMenuClose}>
             Projects
           </MenuItem>
-          <MenuItem component="a" href="#contact" onClick={handleMenuClose}>
+          <MenuItem component="a" href="/#contact" onClick={handleMenuClose}>
             Contact
           </MenuItem>
         </Menu>
