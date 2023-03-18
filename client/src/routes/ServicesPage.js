@@ -10,7 +10,7 @@ import {
   MDBCol,
 } from 'mdb-react-ui-kit';
 
-import './ServicesPage.css';
+import './common.css';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';

@@ -9,7 +9,7 @@ import useIntersection from '../utils/useIntersection';
 const Home = () => {
   const boxRef = useRef(null);
   const [visible, setVisible] = useState(false);
-  const inViewport = useIntersection(boxRef, '-100px'); // Trigger if 100px is visible from the element
+  const inViewport = useIntersection(boxRef, '-50px'); // Trigger if 100px is visible from the element
 
   if (inViewport) {
     if (!visible) {
@@ -32,13 +32,21 @@ const Home = () => {
         marginTop: '-64px',
       }}
     >
-      <Box sx={{ width: '100%', paddingTop: '64px' }}>
+      <Box
+        ref={boxRef}
+        sx={{
+          width: '100%',
+          paddingTop: '64px',
+          opacity: visible ? 1 : 0,
+          transition: 'opacity 2s ease-in-out',
+        }}
+      >
         <div className="bg-image">
           <img
             src="/images/halifax.jpg"
             className="img-fluid"
             alt="Sample"
-            style={{ height: '70vh', width: '100%', objectFit: 'cover' }}
+            style={{ height: '80vh', width: '100%', objectFit: 'cover' }}
           />
           <div
             className="mask"
@@ -46,33 +54,10 @@ const Home = () => {
           >
             <div className="d-flex justify-content-center align-items-end h-100">
               <Stack
-                ref={boxRef}
                 sx={{
                   alignItems: 'center',
-                  opacity: visible ? 1 : 0,
-                  transition: 'opacity 2s ease-in-out',
                 }}
               >
-                {/* <Box
-                  component="a"
-                  bgcolor="secondary.dark"
-                  sx={{
-                    borderRadius: '15%',
-                    p: '10px',
-                  }}
-                >
-                  <Box
-                    component="img"
-                    sx={{
-                      height: {
-                        xs: 45,
-                        sm: 75,
-                      },
-                    }}
-                    alt="BJB Renos Plus Inc logo"
-                    src="/logo.png"
-                  />
-                </Box> */}
                 <Typography
                   variant="h7"
                   gutterBottom
