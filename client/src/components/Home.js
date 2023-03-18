@@ -38,7 +38,7 @@ const Home = () => {
             src="/images/halifax.jpg"
             className="img-fluid"
             alt="Sample"
-            style={{ height: '70vh', width: '100%', objectFit: 'cover' }}
+            style={{ height: '80vh', width: '100%', objectFit: 'cover' }}
           />
           <div
             className="mask"
@@ -53,26 +53,6 @@ const Home = () => {
                   transition: 'opacity 2s ease-in-out',
                 }}
               >
-                {/* <Box
-                  component="a"
-                  bgcolor="secondary.dark"
-                  sx={{
-                    borderRadius: '15%',
-                    p: '10px',
-                  }}
-                >
-                  <Box
-                    component="img"
-                    sx={{
-                      height: {
-                        xs: 45,
-                        sm: 75,
-                      },
-                    }}
-                    alt="BJB Renos Plus Inc logo"
-                    src="/logo.png"
-                  />
-                </Box> */}
                 <Typography
                   variant="h7"
                   gutterBottom

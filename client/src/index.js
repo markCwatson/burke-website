@@ -10,8 +10,9 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Root from './routes/Root';
-import ServicesPage, { loader as contactLoader } from './routes/ServicesPage';
+import ServicesPage, { loader as servicesLoader } from './routes/ServicesPage';
 import ErrorPage from './routes/Error';
+import ProjectsPage, { loader as projectsLoader } from './routes/ProjectsPage';
 
 const theme = createTheme({
   palette: {
@@ -39,7 +40,12 @@ const router = createBrowserRouter([
   {
     path: 'services/:id',
     element: <ServicesPage />,
-    loader: contactLoader,
+    loader: servicesLoader,
+  },
+  {
+    path: 'projects',
+    element: <ProjectsPage />,
+    loader: projectsLoader,
   },
 ]);
 
