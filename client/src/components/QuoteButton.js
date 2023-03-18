@@ -4,24 +4,46 @@ import QuoteModal from './QuoteModal';
 import ThanksModal from './ThanksModal';
 import { Box, Button } from '@mui/material';
 
-export default function QuoteButton({ variant, modal = true }) {
+export default function QuoteButton({
+  variant,
+  onClick = undefined,
+  isActive = undefined,
+}) {
   const [open, setOpen] = useState(false);
   const [thanks, setThanks] = useState(false);
 
-  const handleOpen = () => setOpen(true);
+  const handleOpen = (event) => {
+    if (onClick) {
+      onClick(event);
+      if (isActive) {
+        isActive(true);
+      }
+    }
+    setOpen(true);
+  };
+
   const handleQuoteClose = () => {
     setOpen(false);
+    if (isActive) {
+      isActive(false);
+    }
   };
 
   const sayThanks = () => {
     setThanks(true);
     setTimeout(() => {
       setThanks(false);
+      if (isActive) {
+        isActive(false);
+      }
     }, 4000);
   };
 
   const handleThanksClose = () => {
     setThanks(false);
+    if (isActive) {
+      isActive(false);
+    }
   };
 
   return (
@@ -35,7 +57,7 @@ export default function QuoteButton({ variant, modal = true }) {
           variant={variant}
           size="small"
           endIcon={<SendIcon />}
-          onClick={modal ? handleOpen : undefined}
+          onClick={handleOpen}
         >
           Get A Quote
         </Button>
@@ -51,7 +73,7 @@ export default function QuoteButton({ variant, modal = true }) {
           display: { xs: 'flex', md: 'none' },
         }}
       >
-        <Button variant={variant} onClick={modal ? handleOpen : undefined}>
+        <Button variant={variant} onClick={handleOpen}>
           Get A Quote
         </Button>
       </Box>

@@ -17,9 +17,8 @@ import QuoteButton from './QuoteButton';
 import SendIcon from '@mui/icons-material/Send';
 
 export default function MenuDrawer() {
-  const [state, setState] = React.useState({
-    right: false,
-  });
+  const [state, setState] = React.useState(false);
+  const [quoteActive, setQuoteActive] = React.useState(false);
 
   const itemIcons = {
     About: <InfoIcon />,
@@ -35,7 +34,11 @@ export default function MenuDrawer() {
     Contact: '/#contact',
   };
 
-  const toggleDrawer = (anchor, open) => (event) => {
+  const handleQuoteButtonClick = (event) => {
+    event.stopPropagation();
+  };
+
+  const toggleDrawer = (logic) => (event) => {
     if (
       event.type === 'keydown' &&
       (event.key === 'Tab' || event.key === 'Shift')
@@ -43,15 +46,19 @@ export default function MenuDrawer() {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    if (quoteActive) {
+      return;
+    }
+
+    setState(logic);
   };
 
-  const list = (anchor) => (
+  const list = () => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: 250 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
     >
       <List>
         {['About', 'Services', 'Projects', 'Contact'].map((text, index) => (
@@ -67,12 +74,16 @@ export default function MenuDrawer() {
             </ListItemButton>
           </ListItem>
         ))}
-        <ListItem key={99} disablePadding component="a" href="/quote">
+        <ListItem key={99} disablePadding>
           <ListItemButton>
             <ListItemIcon>
               <SendIcon />
             </ListItemIcon>
-            <QuoteButton variant="outlined" modal={false} />
+            <QuoteButton
+              variant="outlined"
+              onClick={handleQuoteButtonClick}
+              isActive={setQuoteActive}
+            />
           </ListItemButton>
         </ListItem>
       </List>
@@ -90,16 +101,12 @@ export default function MenuDrawer() {
           right: '0%',
           bgcolor: 'secondary.main',
         }}
-        onClick={toggleDrawer('right', true)}
+        onClick={toggleDrawer(true)}
       >
         <MenuIcon />
       </IconButton>
-      <Drawer
-        anchor={'right'}
-        open={state['right']}
-        onClose={toggleDrawer('right', false)}
-      >
-        {list('right')}
+      <Drawer anchor={'right'} open={state} onClose={toggleDrawer(false)}>
+        {list()}
       </Drawer>
     </React.Fragment>
   );

@@ -1,9 +1,0 @@
-.mdb-proj-card-custom {
-    max-width: 100vw;
-  }
-  
-  @media (min-width: 768px) {
-    .mdb-proj-card-custom {
-      max-width: 80vw;
-    }
-  }

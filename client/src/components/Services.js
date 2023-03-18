@@ -12,7 +12,7 @@ export default function Services() {
   const theme = useTheme();
   const boxRef = useRef(null);
   const [visible, setVisible] = useState(false);
-  const inViewport = useIntersection(boxRef, '-100px'); // Trigger if 100px is visible from the element
+  const inViewport = useIntersection(boxRef, '-50px'); // Trigger if 100px is visible from the element
 
   if (inViewport) {
     if (!visible) {
