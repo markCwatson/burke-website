@@ -10,6 +10,9 @@ const projects = [
       '/images/projects/windows/img5.jpg',
       '/images/projects/windows/img6.jpg',
       '/images/projects/windows/img7.jpg',
+      '/images/projects/windows/img8.jpg',
+      '/images/projects/windows/img9.jpg',
+      '/images/projects/windows/img10.jpg',
     ],
     description:
       'BJB Renos Plus Inc. specializes in providing expert window installation services for Insulated Concrete Form (ICF) houses. With a team of highly skilled and experienced professionals, BJB Renos Plus ensures seamless integration of high-quality windows into ICF structures, enhancing energy efficiency, durability, and overall aesthetics. Adhering to strict installation guidelines and using cutting-edge techniques, BJB Renos Plus delivers exceptional results that not only meet, but surpass client expectations. Trust BJB Renos Plus Inc. for precision and expertise in window installations on ICF houses, creating comfortable and energy-efficient living spaces.',

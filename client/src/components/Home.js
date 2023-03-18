@@ -61,7 +61,18 @@ const Home = () => {
                 <Typography
                   variant="h7"
                   gutterBottom
-                  sx={{ color: 'secondary.light', p: 4, fontSize: '1.3rem' }}
+                  sx={{ color: 'secondary.light', p: 0, fontSize: '1.1rem' }}
+                >
+                  BJB Renos Plus Inc.
+                </Typography>
+                <Typography
+                  variant="h7"
+                  gutterBottom
+                  sx={{
+                    color: 'secondary.light',
+                    paddingBottom: 4,
+                    fontSize: '1rem',
+                  }}
                 >
                   Atlantic Canada's contractor
                 </Typography>
