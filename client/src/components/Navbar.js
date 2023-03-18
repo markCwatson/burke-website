@@ -27,17 +27,28 @@ function Navbar({ home }) {
                 xs: 35,
                 sm: 50,
               },
+              marginLeft: {
+                xs: '10px',
+                md: '45px',
+              },
             }}
             alt="BJB Renos Plus Inc logo"
             src="/logo.png"
           />
         </Box>
-        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexGrow: 1,
+          }}
+        >
           <Button
             variant="text"
             size="small"
             href={getHref('about')}
-            sx={{ marginRight: '15px' }}
+            sx={{ marginRight: '35px' }}
           >
             About
           </Button>
@@ -45,7 +56,7 @@ function Navbar({ home }) {
             variant="text"
             size="small"
             href={getHref('services')}
-            sx={{ marginRight: '15px' }}
+            sx={{ marginRight: '35px' }}
           >
             Services
           </Button>
@@ -53,7 +64,7 @@ function Navbar({ home }) {
             variant="text"
             size="small"
             href="/projects"
-            sx={{ marginRight: '15px' }}
+            sx={{ marginRight: '35px' }}
           >
             Projects
           </Button>
@@ -61,7 +72,13 @@ function Navbar({ home }) {
             Contact
           </Button>
         </Box>
-        <QuoteButton variant="contained" />
+        <Box
+          sx={{
+            marginRight: '25px',
+          }}
+        >
+          <QuoteButton variant="contained" />
+        </Box>
         <MenuDrawer />
       </Toolbar>
     </AppBar>

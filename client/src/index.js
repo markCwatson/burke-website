@@ -17,9 +17,9 @@ import ProjectsPage from './routes/ProjectsPage';
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#bddcf2',
-      main: '#3573b6',
-      dark: '#224684',
+      light: '#6c757d',
+      main: '#343a40',
+      dark: '#212529',
       contrastText: '#fff',
     },
     secondary: {
@@ -27,6 +27,10 @@ const theme = createTheme({
       main: '#eeeeee',
       dark: '#9e9e9e',
       contrastText: '#000',
+    },
+    quoteButton: {
+      light: '#bddcf2',
+      dark: '#3573b6',
     },
   },
 });
