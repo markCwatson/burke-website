@@ -52,7 +52,7 @@ function Navbar({ home }) {
           <Button
             variant="text"
             size="small"
-            href="projects"
+            href="/projects"
             sx={{ marginRight: '15px' }}
           >
             Projects
