@@ -106,7 +106,7 @@ function Footer({ home }) {
                 </a>
               </p>
               <p>
-                <a href={getHref('projects', false)} className="text-reset">
+                <a href="/projects" className="text-reset">
                   Projects
                 </a>
               </p>
@@ -119,11 +119,11 @@ function Footer({ home }) {
                 Halifax, NS. Canada
               </p>
               <p>
-                <MDBIcon color="secondary" icon="envelope" className="me3" />
+                <MDBIcon color="secondary" icon="envelope" className="me-2" />
                 bjbrenosplusinc@gmail.com
               </p>
               <p>
-                <MDBIcon color="secondary" icon="phone" className="me-3" />
+                <MDBIcon color="secondary" icon="phone" className="me-2" />
                 1-902-818-8936
               </p>
             </MDBCol>

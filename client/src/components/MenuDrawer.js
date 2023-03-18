@@ -30,7 +30,7 @@ export default function MenuDrawer() {
   const itemLinks = {
     About: '/#about',
     Services: '/#services',
-    Projects: 'projects',
+    Projects: '/projects',
     Contact: '/#contact',
   };
 
