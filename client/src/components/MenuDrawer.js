@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { useTheme } from '@emotion/react';
 
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,6 +18,7 @@ import QuoteButton from './QuoteButton';
 import SendIcon from '@mui/icons-material/Send';
 
 export default function MenuDrawer() {
+  const theme = useTheme();
   const [state, setState] = React.useState(false);
   const [quoteActive, setQuoteActive] = React.useState(false);
 
@@ -70,7 +72,10 @@ export default function MenuDrawer() {
           >
             <ListItemButton>
               <ListItemIcon>{itemIcons[text]}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText
+                primary={text}
+                style={{ color: theme.palette.primary.main }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -81,6 +86,7 @@ export default function MenuDrawer() {
             </ListItemIcon>
             <QuoteButton
               variant="outlined"
+              myBgColor={theme.palette.quoteButton.light}
               onClick={handleQuoteButtonClick}
               isActive={setQuoteActive}
             />
