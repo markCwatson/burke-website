@@ -13,6 +13,8 @@ import InfoIcon from '@mui/icons-material/Info';
 import RoofingIcon from '@mui/icons-material/Roofing';
 import ArtTrackIcon from '@mui/icons-material/ArtTrack';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import QuoteButton from './QuoteButton';
+import SendIcon from '@mui/icons-material/Send';
 
 export default function MenuDrawer() {
   const [state, setState] = React.useState({
@@ -29,7 +31,7 @@ export default function MenuDrawer() {
   const itemLinks = {
     About: '/#about',
     Services: '/#services',
-    Projects: '/#projects',
+    Projects: 'projects',
     Contact: '/#contact',
   };
 
@@ -65,6 +67,14 @@ export default function MenuDrawer() {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem key={99} disablePadding component="a" href="/quote">
+          <ListItemButton>
+            <ListItemIcon>
+              <SendIcon />
+            </ListItemIcon>
+            <QuoteButton variant="outlined" modal={false} />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );

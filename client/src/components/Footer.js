@@ -65,7 +65,7 @@ function Footer({ home }) {
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Products</h6>
+              <h6 className="text-uppercase fw-bold mb-4">Services</h6>
               <p>
                 <a href={getHref('', '0')} className="text-reset">
                   Carpentry
@@ -94,7 +94,7 @@ function Footer({ home }) {
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
+              <h6 className="text-uppercase fw-bold mb-4">Links</h6>
               <p>
                 <a href={getHref('about', false)} className="text-reset">
                   About
