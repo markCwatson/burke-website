@@ -11,12 +11,14 @@ import {
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Container, Grid } from '@mui/material';
+import { useTheme } from '@emotion/react';
 
 import projects from '../data/projects';
 
 import './common.css';
 
 export default function ProjectsPage() {
+  const theme = useTheme();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,19 +42,32 @@ export default function ProjectsPage() {
           container
           spacing={2}
           sx={{
+            maxWidth: '1024px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
           }}
         >
           {projects.map((project) => (
-            <Grid item xs={12} md={10} key={`grid-${project.id}`}>
+            <Grid
+              item
+              xs={12}
+              md={10}
+              key={`grid-${project.id}`}
+              sx={{ marginBottom: '24px' }}
+            >
               <MDBCard className="mb-3" key={`card-${project.id}`}>
                 <MDBCardBody key={`body-${project.id}`}>
-                  <MDBCardTitle key={`title-${project.id}`}>
+                  <MDBCardTitle
+                    key={`title-${project.id}`}
+                    style={{ color: theme.palette.primary.main }}
+                  >
                     {project.title}
                   </MDBCardTitle>
-                  <MDBCardText key={`text-${project.id}`}>
+                  <MDBCardText
+                    key={`text-${project.id}`}
+                    style={{ color: theme.palette.primary.main }}
+                  >
                     {project.description}
                   </MDBCardText>
                 </MDBCardBody>

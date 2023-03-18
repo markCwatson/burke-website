@@ -101,7 +101,7 @@ export default function QuoteModal({ open, handleClose, sayThanks }) {
           <TextField
             required
             name="description"
-            label="Description"
+            label="Brief description of project"
             multiline
             rows={4}
             variant="outlined"

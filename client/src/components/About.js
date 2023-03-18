@@ -6,12 +6,9 @@ import { useRef, useState } from 'react';
 import QuoteButton from './QuoteButton';
 
 import useIntersection from '../utils/useIntersection';
-import { MDBCard, MDBCardBody, MDBCardTitle } from 'mdb-react-ui-kit';
-import { useTheme } from '@emotion/react';
+import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit';
 
 const About = () => {
-  const theme = useTheme();
-
   const boxRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const inViewport = useIntersection(boxRef, '-50px');
@@ -32,7 +29,7 @@ const About = () => {
       id="about"
       sx={{
         paddingTop: '80px',
-        height: '100vh',
+        height: { xs: 'auto', md: '80vh' },
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -40,12 +37,6 @@ const About = () => {
     >
       <MDBCard style={{ height: '100%' }}>
         <MDBCardBody>
-          <Typography
-            component="div"
-            sx={{ color: theme.palette.primary.main }}
-          >
-            <MDBCardTitle className="text-center">About Us</MDBCardTitle>
-          </Typography>
           <Box
             sx={{
               display: 'flex',
