@@ -10,7 +10,7 @@ const services = [
       'Our meticulous attention to detail and stringent quality control measures guarantee that our workmanship stands the test of time, providing our clients with long-lasting value. Recognizing the importance of transparent and open communication, BJB Renos Plus Inc. prioritizes fostering strong, long-lasting relationships with our clients. Our team of dedicated professionals works closely with you throughout the entire process, taking the time to understand your specific requirements, addressing any concerns, and keeping you informed every step of the way.',
     description4:
       'This collaborative approach ensures that your vision is realized to its fullest potential and that the final product is a true reflection of your individual needs and preferences. At BJB Renos Plus Inc., our mission is to combine our extensive expertise and unwavering commitment to quality with a personalized, client-centric approach to deliver exceptional carpentry solutions that exceed expectations. We stand by our reputation as a trusted industry leader, and we look forward to demonstrating our competence and exceeding your expectations in our next project together.',
-    image: '/images/img2.jpg',
+    image: '/images/services/carpentry.jpg',
   },
   {
     id: 1,
@@ -23,7 +23,7 @@ const services = [
       'With a keen eye for design and a commitment to using only the finest materials, we are able to elevate your project to new heights of aesthetic appeal. Our interior and exterior painting services utilize premium quality paints and finishes, ensuring that your walls and surfaces are not only vibrant and long-lasting but also easy to maintain. In addition, our custom trim and molding installations provide a refined, tailored appearance that seamlessly complements the overall design of your space. Our cabinetry installation services, meanwhile, combine functionality with elegance, providing you with storage solutions that are both practical and visually appealing.',
     description4:
       'At BJB Renos Plus Inc., we understand that the success of a project is measured by the satisfaction of our clients. As such, we place great emphasis on communication and collaboration throughout the entire finish work process. Our team is dedicated to understanding your unique requirements and preferences, working closely with you to achieve the perfect blend of form and function. By entrusting us with your finish work needs, you can be confident that the final result will be a harmonious balance of beauty, durability, and practicality that surpasses your expectations.',
-    image: '/images/img3.jpg',
+    image: '/images/services/finish.jpg',
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const services = [
       "In addition to our expertise in siding selection and installation, BJB Renos Plus Inc. also specializes in siding repair and maintenance services. Our team is equipped to address any wear and tear or damage that may occur over time, restoring your siding to its original condition and ensuring the continued protection and visual appeal of your home's exterior. Through regular maintenance and prompt repairs, we help extend the lifespan of your siding and preserve the integrity of your property.",
     description4:
       'At BJB Renos Plus Inc., we are committed to delivering exceptional siding solutions that exceed your expectations. Our client-centric approach emphasizes clear communication and collaboration, allowing us to understand your unique needs and preferences and tailor our services accordingly. With our extensive experience, meticulous attention to detail, and unwavering dedication to quality, you can trust BJB Renos Plus Inc. to provide siding services that not only protect and enhance your home but also stand as a testament to our reputation for excellence in the industry.',
-    image: '/images/siding.jpg',
+    image: '/images/services/siding.jpg',
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const services = [
       "In addition to our commitment to quality craftsmanship, BJB Renos Plus Inc. places great emphasis on client satisfaction and open communication throughout the entire deck-building process. We collaborate with you at every stage, from the initial design consultation to the final walk-through, ensuring that your needs and preferences are at the forefront of our decision-making. This collaborative approach allows us to exceed your expectations, delivering a deck that truly reflects your personal style and enhances your property's overall appeal.",
     description4:
       'At BJB Renos Plus Inc., we take pride in our ability to transform your outdoor space with our exceptional deck-building services. Our unwavering dedication to quality, combined with our extensive industry experience and commitment to client satisfaction, guarantees that your deck project will be executed with precision, professionalism, and unparalleled attention to detail. Trust BJB Renos Plus Inc. to bring your vision to life, and let us create the perfect deck that complements your home and enriches your outdoor living experience.',
-    image: '/images/proj4.jpg',
+    image: '/images/services/deck.jpg',
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ const services = [
       'In addition to our window installation services, BJB Renos Plus Inc. is also dedicated to providing exceptional window maintenance and repair solutions. Our skilled team is adept at identifying and addressing any issues that may arise over time, ensuring that your windows continue to function effectively and maintain their visual appeal. Through timely maintenance and repairs, we help extend the lifespan of your windows and preserve the overall value and integrity of your property.',
     description4:
       "At BJB Renos Plus Inc., our commitment to quality, client satisfaction, and open communication sets us apart as a trusted provider of window installation and maintenance services. We collaborate closely with you throughout the entire process, from the initial consultation to the project's completion, ensuring that your unique needs and preferences guide our decision-making. By entrusting BJB Renos Plus Inc. with your window needs, you can be confident that the final result will be a harmonious blend of functionality, energy efficiency, and aesthetic appeal that surpasses your expectations.",
-    image: '/images/windows.jpg',
+    image: '/images/services/windows.jpg',
   },
 ];
 

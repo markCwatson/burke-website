@@ -12,7 +12,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Root from './routes/Root';
 import ServicesPage, { loader as servicesLoader } from './routes/ServicesPage';
 import ErrorPage from './routes/Error';
-import ProjectsPage, { loader as projectsLoader } from './routes/ProjectsPage';
+import ProjectsPage from './routes/ProjectsPage';
 
 const theme = createTheme({
   palette: {
@@ -45,7 +45,6 @@ const router = createBrowserRouter([
   {
     path: 'projects',
     element: <ProjectsPage />,
-    loader: projectsLoader,
   },
 ]);
 
