@@ -6,6 +6,8 @@ import { Box, Button } from '@mui/material';
 
 export default function QuoteButton({
   variant,
+  myBgColor = 'quoteButton.dark',
+  size = 'small',
   onClick = undefined,
   isActive = undefined,
 }) {
@@ -55,9 +57,10 @@ export default function QuoteButton({
       >
         <Button
           variant={variant}
-          size="small"
+          size={size}
           endIcon={<SendIcon />}
           onClick={handleOpen}
+          sx={{ bgcolor: myBgColor }}
         >
           Get A Quote
         </Button>
@@ -73,7 +76,11 @@ export default function QuoteButton({
           display: { xs: 'flex', md: 'none' },
         }}
       >
-        <Button variant={variant} onClick={handleOpen}>
+        <Button
+          variant={variant}
+          onClick={handleOpen}
+          sx={{ bgcolor: myBgColor }}
+        >
           Get A Quote
         </Button>
       </Box>

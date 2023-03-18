@@ -7,8 +7,10 @@ import QuoteButton from './QuoteButton';
 
 import useIntersection from '../utils/useIntersection';
 import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit';
+import { useTheme } from '@emotion/react';
 
 const About = () => {
+  const theme = useTheme();
   const boxRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const inViewport = useIntersection(boxRef, '-50px');
@@ -119,7 +121,11 @@ const About = () => {
                   p: '30px',
                 }}
               >
-                <QuoteButton variant="outlined" />
+                <QuoteButton
+                  variant="outlined"
+                  myBgColor={theme.palette.quoteButton.light}
+                  size="large"
+                />
               </Grid>
             </Grid>
           </Box>
