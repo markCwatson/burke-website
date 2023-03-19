@@ -136,8 +136,8 @@ function Footer({ home }) {
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}
       >
         © 2023 Copyright:
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-          bjbrenos.com
+        <a className="text-reset fw-bold p-2" href="https://mdbootstrap.com/">
+          BJB Renos Plus Inc.
         </a>
       </div>
     </MDBFooter>

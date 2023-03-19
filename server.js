@@ -13,10 +13,10 @@ const sendEmail = (requestBody) => {
   const { name, number, email, description } = requestBody;
 
   const msg = {
-    to: process.env.EMAIL,
-    from: process.env.EMAIL,
+    to: process.env.TO_EMAIL,
+    from: process.env.FROM_EMAIL,
     subject: `Request for quote from ${name}`,
-    text: `Form contents:
+    text: `Details:
     Name: ${name} 
     Number: ${number} 
     Email: ${email} 
