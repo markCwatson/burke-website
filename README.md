@@ -1,3 +1,3 @@
 ## Website for BJB Renos
 
-Available for preview at [www.bjbrenos.ca](https://bjbrenos.ca).
+A simple and wuick website i made for a friend's construction business. Formerly www.bjbrenos.ca (shut down now).
